@@ -20,7 +20,6 @@ document.querySelector('.number').textContent = '?';
 const reset = function(){
     let guess = document.querySelector('.guess').value;
 
-
 secretNumber = Math.trunc(Math.random() * 20 + 1);
 
     if(guess > 0){
@@ -39,19 +38,14 @@ secretNumber = Math.trunc(Math.random() * 20 + 1);
     document.querySelector('.guess').value = '';
     console.log(guess);
 }
-
 }
 
 //Add event listener to the again button and provide code.
 again.addEventListener('click',reset);
 
-
-
-
 check.addEventListener('click', function(){
     const guess = Number(document.querySelector('.guess').value);
     console.log(guess, typeof guess);
-
 
 //Checking when score is greater than 1
     if (score >= 1) {
@@ -66,25 +60,20 @@ check.addEventListener('click', function(){
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
+    };
 
 
-    } else if (guess > secretNumber){
-    document.querySelector('.message').textContent = '📈Too high!';
+    if (guess !== secretNumber){
+        if (score > 1){
+    document.querySelector('.message').textContent = guess > secretNumber ? '📈Too high!' : '📉Too low!';
     score--;
     document.querySelector('.score').textContent = score;
-    /*This checks to see if the guess is less than the secret number.
-    If so, it will display a message and decrease the score */
-} else if (guess < secretNumber){
-    document.querySelector('.message').textContent = '📉Too low!';
-    score--;    
-    document.querySelector('.score').textContent = score;
-    }
-    }
-
-    if (score === 0){
+    } else if (score === 0){
     document.querySelector('.message').textContent = 'You lost the game!';
     score = 0;
     document.querySelector('.score').textContent = score;
+    }}
 }});
 //end of event listener for check
 
+//use ternary operators instead. This will refactor code to smaller lines
