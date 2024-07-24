@@ -147,4 +147,26 @@ justify-content: space-between;
 header {
   border-bottom: none;
 }
+.secondsection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 }
