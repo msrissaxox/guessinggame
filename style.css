@@ -119,35 +119,32 @@ h1 {
 }
 
 @media (min-width: 300px) and (max-width: 800px){
- .topsection {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  align-items: center;
-  height: 50vh; */
+.topsection h1 {
+    position: absolute;
+  }
+.between {
+    position: relative;
+    top: 5px;
+    right: 0;
 
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  border: solid red 5px;
-  width: 100vw;
+  }
+.again {
+    position: relative;
+    left: 0;
+    margin-bottom: 100px;
+  }
   
+
+.topsection {
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: space-between;
 }
 
-.again, .between {
-  position: relative;
-  align-self: center;
-  margin: 5px;
-}
-
-.number {
-  left: 50;
-  margin-bottom: 100px;
-}
 
 header {
   border-bottom: none;
 }
-  }
+}
